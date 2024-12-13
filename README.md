@@ -7,7 +7,7 @@ open terminal
 
 run below command
 
-go run main.go handler.go models.go openMeteo.go weatherApi.go
+`go run main.go handler.go models.go openMeteo.go weatherApi.go`
 
 ## 2. How to test
 curl --location 'http://localhost:8080/weather?lon=13.41&lat=52.52'
