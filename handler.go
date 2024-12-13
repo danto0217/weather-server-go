@@ -12,10 +12,9 @@ func GetWeather(w http.ResponseWriter, r *http.Request) {
 	// Validate input parameters
 	lat := r.URL.Query().Get("lat")
 	lon := r.URL.Query().Get("lon")
-	apiKey := r.URL.Query().Get("apiKey")
 
-	if lat == "" || lon == "" || apiKey == "" {
-		http.Error(w, "Missing query parameters lat, lon, or apiKey", http.StatusBadRequest)
+	if lat == "" || lon == "" {
+		http.Error(w, "Missing query parameters lat or lon", http.StatusBadRequest)
 		return
 	}
 
@@ -43,7 +42,7 @@ func GetWeather(w http.ResponseWriter, r *http.Request) {
 	// Fetch data concurrently
 	wg.Add(2)
 	go FetchWeatherFromOpenMeteo(latFloat, lonFloat, &wg, result.OpenMeteo)
-	go FetchWeatherFromWeatherAPI(latFloat, lonFloat, apiKey, &wg, result.WeatherAPI)
+	go FetchWeatherFromWeatherAPI(latFloat, lonFloat, &wg, result.WeatherAPI)
 
 	// Wait for all goroutines to complete
 	wg.Wait()
