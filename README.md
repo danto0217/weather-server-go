@@ -19,7 +19,7 @@ Each day’s forecast is fetched concurrently for both APIs (Open-Meteo and Weat
 
 The results are sent through a channel and collected in the main function.
 ### Extensibility:
-Defined and usedWeatherProvider interface. 
+WeatherProvider interface! 
 
 The interface defines the method FetchForecast(lat, lon string) (map[string]interface{}, error) which is implemented by both the Open-Meteo and WeatherAPI services. 
 
