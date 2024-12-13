@@ -3,45 +3,12 @@
 go run main.go handler.go models.go openMeteo.go weatherApi.go
 
 ## 2. How to test
-curl --location 'http://localhost:8080/weather?lon=13.41&lat=52.52&apiKey=c6740c40812a44719b215848241312'
+Api_Key : c6740c40812a44719b215848241312
+curl --location 'http://localhost:8080/weather?lon=13.41&lat=52.52&apiKey={Api_Key}'
 
 ## 3. Test Result
-{
-    "Open-Meteo": {
-        "2024-12-13": {
-            "temperature_max": 2.6
-        },
-        "2024-12-14": {
-            "temperature_max": 2.4
-        },
-        "2024-12-15": {
-            "temperature_max": 6.6
-        },
-        "2024-12-16": {
-            "temperature_max": 10.6
-        },
-        "2024-12-17": {
-            "temperature_max": 9.2
-        }
-    },
-    "WeatherAPI": {
-        "2024-12-13": {
-            "temperature_max": 3.2
-        },
-        "2024-12-14": {
-            "temperature_max": 2.8
-        },
-        "2024-12-15": {
-            "temperature_max": 5
-        },
-        "2024-12-16": {
-            "temperature_max": 9.9
-        },
-        "2024-12-17": {
-            "temperature_max": 9
-        }
-    }
-}
+![image](https://github.com/user-attachments/assets/3b479aa1-ffd6-4808-a428-cfd91766b986)
+
 
 ## 4. Explanation
 ### Concurrency:
