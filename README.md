@@ -1,11 +1,12 @@
 # Weather HTTP Server with goLang
 ## 1. How to run
-install go
-go to root directory 
+Install go
 
-open terminal
+Go to project root directory 
 
-run below command
+Open terminal
+
+Run below command
 
 `go run main.go handler.go models.go openMeteo.go weatherApi.go`
 
