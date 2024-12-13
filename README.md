@@ -4,6 +4,7 @@ go run main.go handler.go models.go openMeteo.go weatherApi.go
 
 ## 2. How to test
 Api_Key : c6740c40812a44719b215848241312
+
 curl --location 'http://localhost:8080/weather?lon=13.41&lat=52.52&apiKey={Api_Key}'
 
 ## 3. Test Result
