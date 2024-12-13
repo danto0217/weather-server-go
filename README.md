@@ -20,3 +20,41 @@ go run main.go handler.go models.go openMeteo.go weatherApi.go
     
 ### HTTP Endpoint:
     The server exposes the /weather endpoint, which accepts latitude (lat), longitude (lon), and apiKey as query parameters.
+
+## 3. Test Result
+{
+    "Open-Meteo": {
+        "2024-12-13": {
+            "temperature_max": 2.6
+        },
+        "2024-12-14": {
+            "temperature_max": 2.4
+        },
+        "2024-12-15": {
+            "temperature_max": 6.6
+        },
+        "2024-12-16": {
+            "temperature_max": 10.6
+        },
+        "2024-12-17": {
+            "temperature_max": 9.2
+        }
+    },
+    "WeatherAPI": {
+        "2024-12-13": {
+            "temperature_max": 3.2
+        },
+        "2024-12-14": {
+            "temperature_max": 2.8
+        },
+        "2024-12-15": {
+            "temperature_max": 5
+        },
+        "2024-12-16": {
+            "temperature_max": 9.9
+        },
+        "2024-12-17": {
+            "temperature_max": 9
+        }
+    }
+}
